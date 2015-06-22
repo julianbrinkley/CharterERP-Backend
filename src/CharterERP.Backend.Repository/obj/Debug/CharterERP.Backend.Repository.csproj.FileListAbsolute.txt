@@ -10,3 +10,15 @@ C:\Users\Julian\Desktop\CharterERP-Backend-Old\CharterERP.Backend\CharterERP.Bac
 C:\Users\Julian\Desktop\CharterERP-Backend-Old\CharterERP.Backend\CharterERP.Backend.Repository\bin\Debug\EntityFramework.xml
 C:\Users\Julian\Desktop\CharterERP-Backend-Old\CharterERP.Backend\CharterERP.Backend.Repository\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Julian\Desktop\CharterERP-Backend-Old\CharterERP.Backend\CharterERP.Backend.Repository\obj\Debug\CharterERP.Backend.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\obj\Debug\CharterERP.Backend.Repository.csprojResolveAssemblyReference.cache
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\obj\Debug\CharterERP.Backend.Repository.dll
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\obj\Debug\CharterERP.Backend.Repository.pdb
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\CharterERP.Backend.Repository.dll.config
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\CharterERP.Backend.Repository.dll
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\CharterERP.Backend.Repository.pdb
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\CharterERP.Backend.Domain.dll
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\EntityFramework.dll
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\CharterERP.Backend.Domain.pdb
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\EntityFramework.xml
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\EntityFramework.SqlServer.xml

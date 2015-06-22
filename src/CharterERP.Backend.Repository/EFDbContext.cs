@@ -13,11 +13,13 @@ namespace CharterERP.Backend.Repository
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Dealer> Dealers { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Product>().ToTable("Products");
+            modelBuilder.Entity<Dealer>().ToTable("Dealers");
 
         }
 

@@ -1,4 +1,4 @@
-﻿using CharterERP.Backend.Domain;
+﻿using CharterERP.Backend.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace CharterERP.Backend.Repository
 {
-   public interface IUserRepository
+    public interface IDealerRepository
     {
-       IEnumerable<User> Users { get; }
+        IEnumerable<Dealer> Dealers { get;  }
     }
 }

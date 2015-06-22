@@ -7,7 +7,7 @@
     <ProjectGuid>{D12E6988-82CB-4E81-9969-EF4B81E6382D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CharterERP.Backend.Domain</RootNamespace>
+    <RootNamespace>CharterERP.Backend.Domain.Entities</RootNamespace>
     <AssemblyName>CharterERP.Backend.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dealer.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />

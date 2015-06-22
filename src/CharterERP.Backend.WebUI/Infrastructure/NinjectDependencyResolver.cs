@@ -47,6 +47,8 @@ namespace CharterERP.Backend.WebUI.Infrastructure
             //kernel.Bind<IProductsRepository>().ToConstant(mock.Object); 
 
             kernel.Bind<IProductRepository>().To<ProductRepository>();
+         
+           
 
         }
     }
