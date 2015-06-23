@@ -46,8 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAccountRepository.cs" />
     <Compile Include="Abstract\IDealerRepository.cs" />
+    <Compile Include="Abstract\IEmployeeRepository.cs" />
+    <Compile Include="Abstract\IStoreRepository.cs" />
+    <Compile Include="Concrete\AccountRepository.cs" />
     <Compile Include="Concrete\DealerRepository.cs" />
+    <Compile Include="Concrete\EmployeeRepository.cs" />
+    <Compile Include="Concrete\StoreRepository.cs" />
     <Compile Include="EFDbContext.cs" />
     <Compile Include="Abstract\IProductRepository.cs" />
     <Compile Include="Abstract\IUserRepository.cs" />

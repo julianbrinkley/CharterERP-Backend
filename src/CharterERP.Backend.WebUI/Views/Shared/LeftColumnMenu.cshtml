@@ -226,7 +226,7 @@
                         <li>@Html.ActionLink("Login", "Login", "Account")</li>
                         <li>@Html.ActionLink("Register", "Register", "Account")</li>
                     }
-}
+                }
             </ul>
 
             <!-- /.dropdown-user -->
@@ -331,14 +331,14 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li class="active">
-                    <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> System Administration<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
-                        <li>
-                            <a class="active" href="blank.html">Blank Page</a>
-                        </li>
-                        <li>
-                            <a href="login.html">Login Page</a>
-                        </li>
+                        <li>@Html.ActionLink("Dealer Account", "List", "Dealer")</li>
+
+                        <li>@Html.ActionLink("Store", "Index", "Store")</li>
+
+                        <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
+
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>

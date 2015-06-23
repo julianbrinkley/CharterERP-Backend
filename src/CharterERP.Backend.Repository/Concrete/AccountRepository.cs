@@ -7,29 +7,14 @@ using System.Threading.Tasks;
 
 namespace CharterERP.Backend.Repository
 {
-    public class DealerRepository : RepositoryBase<EFDbContext>, IDealerRepository
+    public class AccountRepository : RepositoryBase<EFDbContext>, IAccountRepository
     {
 
-        //Create
-
         //Read
-
-        //Read
-        public IEnumerable<Dealer> Dealers
+        public IEnumerable<Account> Accounts
         {
-            get { return DataContext.Dealers; }
+            get { return DataContext.Accounts; }
         }
-
-
-        //Update
-
-
-
-
-        //Delete
-
-
-
 
     }
 }

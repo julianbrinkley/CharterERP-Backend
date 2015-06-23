@@ -1,5 +1,4 @@
-﻿using CharterERP.Backend.Repository;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,35 +6,27 @@ using System.Web.Mvc;
 
 namespace CharterERP.Backend.WebUI.Controllers
 {
-    public class DealerController : Controller
+    public class EmployeeController : Controller
     {
-        private IDealerRepository repository;
-
-        public DealerController(IDealerRepository dealerRepository)
+        // GET: Employee
+        public ActionResult Index()
         {
-            this.repository = dealerRepository;
-
+            return View();
         }
 
-        // GET: Dealer
-        public ViewResult List()
-        {
-            return View(repository.Dealers);
-        }
-
-        // GET: Dealer/Details/5
+        // GET: Employee/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Dealer/Create
+        // GET: Employee/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Dealer/Create
+        // POST: Employee/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -51,13 +42,13 @@ namespace CharterERP.Backend.WebUI.Controllers
             }
         }
 
-        // GET: Dealer/Edit/5
+        // GET: Employee/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Dealer/Edit/5
+        // POST: Employee/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -73,13 +64,13 @@ namespace CharterERP.Backend.WebUI.Controllers
             }
         }
 
-        // GET: Dealer/Delete/5
+        // GET: Employee/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Dealer/Delete/5
+        // POST: Employee/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

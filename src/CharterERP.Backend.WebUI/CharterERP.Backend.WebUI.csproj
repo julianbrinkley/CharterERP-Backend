@@ -885,9 +885,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DealerController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NavController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -913,7 +915,7 @@
     <Content Include="Views\Account\Login1.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Dealer\Index.cshtml" />
+    <Content Include="Views\Dealer\List.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -923,7 +925,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Employee\" />
     <Folder Include="Views\Go\" />
+    <Folder Include="Views\Store\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CharterERP.Backend.Domain\CharterERP.Backend.Domain.csproj">
