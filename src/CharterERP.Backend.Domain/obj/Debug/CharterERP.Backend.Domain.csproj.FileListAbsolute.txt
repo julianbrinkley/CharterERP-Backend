@@ -68,6 +68,5 @@ C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Domai
 C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Domain\bin\Debug\System.Web.WebPages.xml
 C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Domain\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Domain\obj\Debug\CharterERP.Backend.Domain.csprojResolveAssemblyReference.cache
 C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Domain\obj\Debug\CharterERP.Backend.Domain.dll
 C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Domain\obj\Debug\CharterERP.Backend.Domain.pdb

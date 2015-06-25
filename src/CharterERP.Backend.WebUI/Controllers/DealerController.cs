@@ -1,5 +1,6 @@
 ﻿using CharterERP.Backend.Domain.Entities;
 using CharterERP.Backend.Repository;
+using CharterERP.Backend.WebUI.Models.Dealer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,20 +42,30 @@ namespace CharterERP.Backend.WebUI.Controllers
         // POST: Dealer/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Dealer dealer)
+        public ActionResult Create(DealerCreateViewModel data)
         {
             try
             {
                 if (ModelState.IsValid)
-                {
-                    DateTime current = DateTime.Now;
-                    Account account = new Account { BillDate =  DateTime.Parse("2015-09-01")};
-                    dealer.Account = account;
+                {                    
+                
+                    Dealer dealer = new Dealer
+                    {
+                        Name = data.Name,
+                        StreetAddress = data.StreetAddress,
+                        City = data.City,
+                        State = data.State,
+                        PostalCode = data.PostalCode,
+                        Account = new Account { BillDate =  DateTime.Parse("2015-09-01")}
+                    };
 
-                    repository.SaveDealer(dealer);
+                    repository.SaveDealer(dealer);                
+                    
+                    return RedirectToAction("Index");
                 }
 
-                return RedirectToAction("Index");
+                return View(data);
+
             }
             catch
             {
@@ -72,16 +83,20 @@ namespace CharterERP.Backend.WebUI.Controllers
 
         // POST: Dealer/Edit/5
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, Dealer dealer)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    repository.SaveDealer(dealer);
+                    repository.SaveDealer(dealer);                
+                    return RedirectToAction("Index");
                 }
 
-                return RedirectToAction("Index");
+                return View(dealer);
+
+
             }
             catch
             {
