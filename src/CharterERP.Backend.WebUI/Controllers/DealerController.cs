@@ -1,4 +1,5 @@
-﻿using CharterERP.Backend.Repository;
+﻿using CharterERP.Backend.Domain.Entities;
+using CharterERP.Backend.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace CharterERP.Backend.WebUI.Controllers
         }
 
         // GET: Dealer
-        public ViewResult List()
+        public ViewResult Index()
         {
             return View(repository.Dealers);
         }
@@ -26,7 +27,9 @@ namespace CharterERP.Backend.WebUI.Controllers
         // GET: Dealer/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Dealer dealer = repository.Dealers.First(d => d.DealerID == id);
+
+            return View(dealer);
         }
 
         // GET: Dealer/Create
@@ -37,11 +40,19 @@ namespace CharterERP.Backend.WebUI.Controllers
 
         // POST: Dealer/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Dealer dealer)
         {
             try
             {
-                // TODO: Add insert logic here
+                if (ModelState.IsValid)
+                {
+                    DateTime current = DateTime.Now;
+                    Account account = new Account { BillDate =  DateTime.Parse("2015-09-01")};
+                    dealer.Account = account;
+
+                    repository.SaveDealer(dealer);
+                }
 
                 return RedirectToAction("Index");
             }
@@ -52,18 +63,23 @@ namespace CharterERP.Backend.WebUI.Controllers
         }
 
         // GET: Dealer/Edit/5
-        public ActionResult Edit(int id)
+        public ViewResult Edit(int id)
         {
-            return View();
+            Dealer dealer = repository.Dealers.First(d => d.DealerID == id);
+
+            return View(dealer);
         }
 
         // POST: Dealer/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Dealer dealer)
         {
             try
             {
-                // TODO: Add update logic here
+                if (ModelState.IsValid)
+                {
+                    repository.SaveDealer(dealer);
+                }
 
                 return RedirectToAction("Index");
             }
@@ -76,7 +92,9 @@ namespace CharterERP.Backend.WebUI.Controllers
         // GET: Dealer/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Dealer dealer = repository.Dealers.FirstOrDefault(d => d.DealerID == id);
+
+            return View(dealer);
         }
 
         // POST: Dealer/Delete/5
@@ -85,7 +103,7 @@ namespace CharterERP.Backend.WebUI.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
+                repository.DeleteDealer(id);
 
                 return RedirectToAction("Index");
             }

@@ -130,3 +130,4 @@ C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.WebUI
 C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.WebUI\obj\Debug\CharterERP.Backend.WebUI.csprojResolveAssemblyReference.cache
 C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.WebUI\obj\Debug\CharterERP.Backend.WebUI.dll
 C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.WebUI\obj\Debug\CharterERP.Backend.WebUI.pdb
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.WebUI\bin\Microsoft.Web.Infrastructure.dll

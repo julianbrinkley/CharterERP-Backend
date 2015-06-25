@@ -10,5 +10,9 @@ namespace CharterERP.Backend.Repository
     public interface IDealerRepository
     {
         IEnumerable<Dealer> Dealers { get;  }
+
+        void SaveDealer(Dealer dealer);
+
+        Dealer DeleteDealer(int dealerID);
     }
 }
