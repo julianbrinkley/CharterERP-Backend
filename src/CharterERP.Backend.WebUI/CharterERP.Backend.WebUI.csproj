@@ -930,6 +930,9 @@
     <Content Include="Views\Store\Index.cshtml" />
     <Content Include="Views\Store\Details.cshtml" />
     <Content Include="Views\Store\Edit.cshtml" />
+    <Content Include="Views\Inventory\Index.cshtml" />
+    <Content Include="Views\Inventory\Details.cshtml" />
+    <Content Include="Views\Inventory\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -941,7 +944,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Employee\" />
     <Folder Include="Views\Go\" />
-    <Folder Include="Views\Inventory\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CharterERP.Backend.Domain\CharterERP.Backend.Domain.csproj">

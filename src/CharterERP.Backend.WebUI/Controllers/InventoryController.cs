@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharterERP.Backend.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,19 @@ namespace CharterERP.Backend.WebUI.Controllers
 {
     public class InventoryController : Controller
     {
+
+        private IVehicleRepository repository;
+
+        public InventoryController(IVehicleRepository vehicleRepository)
+        {
+            this.repository = vehicleRepository;
+
+        }
+
         // GET: Inventory
         public ActionResult Index()
         {
-            return View();
+            return View(repository.Vehicles);
         }
 
         // GET: Inventory/Details/5
