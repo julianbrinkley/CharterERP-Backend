@@ -27,8 +27,14 @@ namespace CharterERP.Backend.Repository
                     dbEntry.City = dealer.City;
                     dbEntry.State = dealer.State;
                     dbEntry.PostalCode = dealer.PostalCode;
-                    dbEntry.Account = dealer.Account;
+                    dbEntry.AccountID = dealer.AccountID;
+
+                    dbEntry.Stores = dealer.Stores;
                     dbEntry.Employees = dealer.Employees;
+                    dbEntry.Vehicles = dealer.Vehicles;
+
+                    dbEntry.Account = dealer.Account;
+
                 }
             }
 

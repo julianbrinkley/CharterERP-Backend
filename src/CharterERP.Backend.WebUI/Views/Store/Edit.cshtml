@@ -1,5 +1,5 @@
-﻿@using CharterERP.Backend.WebUI.Models.Dealer;
-@model DealerEditViewModel
+﻿@using CharterERP.Backend.WebUI.Models.Store;
+@model StoreEditViewModel
 
 @{
     ViewBag.Title = "Edit";
@@ -13,10 +13,10 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Dealer</h4>
+        <h4>Store</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.DealerID)
+        @Html.HiddenFor(model => model.StoreID)
 
         <div class="form-group">
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -57,7 +57,6 @@
                 @Html.ValidationMessageFor(model => model.PostalCode, "", new { @class = "text-danger" })
             </div>
         </div>
-
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

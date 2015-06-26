@@ -51,6 +51,7 @@ namespace CharterERP.Backend.WebUI.Infrastructure
             kernel.Bind<IEmployeeRepository>().To<EmployeeRepository>();
             kernel.Bind<IStoreRepository>().To<StoreRepository>();
             kernel.Bind<IAccountRepository>().To<AccountRepository>();
+            kernel.Bind<IVehicleRepository>().To<VehicleRepository>();
          
            
 

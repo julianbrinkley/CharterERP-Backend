@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace CharterERP.Backend.Repository
 {
-   public interface IStoreRepository
+    public interface IVehicleRepository
     {
-       IEnumerable<Store> Stores { get; }
+        IEnumerable<Vehicle> Vehicles { get; }
 
-       void SaveStore(Store store);
+        void SaveVehicle(Vehicle vehicle);
 
-       Store DeleteStore(int storeID);
+        Vehicle DeleteVehicle(int vehicleID);
+
     }
 }

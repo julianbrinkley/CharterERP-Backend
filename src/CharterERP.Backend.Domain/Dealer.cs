@@ -29,6 +29,7 @@ namespace CharterERP.Backend.Domain.Entities
 
         public virtual ICollection<Store> Stores { get; set; }
         public virtual ICollection<Employee> Employees { get; set; }
+        public virtual ICollection<Vehicle> Vehicles { get; set; }
 
         public virtual Account Account { get; set; }
 

@@ -36,6 +36,8 @@ namespace CharterERP.Backend.WebUI.Controllers
         // GET: Dealer/Create
         public ActionResult Create()
         {
+
+
             return View();
         }
 
@@ -69,32 +71,53 @@ namespace CharterERP.Backend.WebUI.Controllers
             }
             catch
             {
-                return View();
+                return View(data);
             }
         }
 
         // GET: Dealer/Edit/5
-        public ViewResult Edit(int id)
+        public ActionResult Edit(int id)
         {
             Dealer dealer = repository.Dealers.First(d => d.DealerID == id);
 
-            return View(dealer);
+            var model = new DealerEditViewModel 
+            {
+                Name = dealer.Name,
+                StreetAddress =dealer.StreetAddress,
+                City = dealer.City,
+                State = dealer.State,
+                PostalCode = dealer.PostalCode,
+                DealerID = dealer.DealerID 
+            };
+
+            return View(model);
         }
 
         // POST: Dealer/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, Dealer dealer)
+        public ActionResult Edit(int id, DealerEditViewModel data)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
+
+                    Dealer dealer = new Dealer
+                    {
+                        DealerID = data.DealerID,
+                        Name = data.Name,
+                        StreetAddress = data.StreetAddress,
+                        City = data.City,
+                        State = data.State,
+                        PostalCode = data.PostalCode,
+                    };
+
                     repository.SaveDealer(dealer);                
                     return RedirectToAction("Index");
                 }
 
-                return View(dealer);
+                return View(data);
 
 
             }

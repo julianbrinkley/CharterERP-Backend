@@ -50,10 +50,12 @@
     <Compile Include="Abstract\IDealerRepository.cs" />
     <Compile Include="Abstract\IEmployeeRepository.cs" />
     <Compile Include="Abstract\IStoreRepository.cs" />
+    <Compile Include="Abstract\IVehicleRepository.cs" />
     <Compile Include="Concrete\AccountRepository.cs" />
     <Compile Include="Concrete\DealerRepository.cs" />
     <Compile Include="Concrete\EmployeeRepository.cs" />
     <Compile Include="Concrete\StoreRepository.cs" />
+    <Compile Include="Concrete\VehicleRepository.cs" />
     <Compile Include="EFDbContext.cs" />
     <Compile Include="Abstract\IProductRepository.cs" />
     <Compile Include="Abstract\IUserRepository.cs" />
@@ -71,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

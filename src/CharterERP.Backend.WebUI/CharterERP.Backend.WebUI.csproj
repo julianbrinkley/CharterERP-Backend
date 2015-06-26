@@ -888,6 +888,7 @@
     <Compile Include="Controllers\DealerController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InventoryController.cs" />
     <Compile Include="Controllers\NavController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\StoreController.cs" />
@@ -897,10 +898,13 @@
     <Compile Include="Helpers\PagingHelpers.cs" />
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
     <Compile Include="Models\Dealer\DealerCreateViewModel.cs" />
+    <Compile Include="Models\Dealer\DealerEditViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\PagingInfo.cs" />
     <Compile Include="Models\ProductsListViewModel.cs" />
     <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Models\Store\StoreCreateViewModel.cs" />
+    <Compile Include="Models\Store\StoreEditViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -922,6 +926,10 @@
     <Content Include="Views\Dealer\Edit.cshtml" />
     <Content Include="Views\Dealer\Details.cshtml" />
     <Content Include="Views\Dealer\Delete.cshtml" />
+    <Content Include="Views\Store\Create.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Store\Details.cshtml" />
+    <Content Include="Views\Store\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -933,7 +941,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Employee\" />
     <Folder Include="Views\Go\" />
-    <Folder Include="Views\Store\" />
+    <Folder Include="Views\Inventory\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CharterERP.Backend.Domain\CharterERP.Backend.Domain.csproj">
