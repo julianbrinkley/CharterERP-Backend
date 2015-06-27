@@ -24,6 +24,11 @@ namespace CharterERP.Backend.WebUI.Controllers
             return View(repository.Vehicles);
         }
 
+        public ActionResult Test()
+        {
+            return View();
+        }
+
         // GET: Inventory/Details/5
         public ActionResult Details(int id)
         {

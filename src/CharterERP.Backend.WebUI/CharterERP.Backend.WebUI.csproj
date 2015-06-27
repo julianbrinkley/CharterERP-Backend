@@ -868,11 +868,13 @@
     <Content Include="bower_components\raphael\.bower.json" />
     <Content Include="bower_components\raphael\bower.json" />
     <Content Include="Icon.png" />
+    <Content Include="index-test.html" />
     <Content Include="js\flot-data.js" />
     <Content Include="js\morris-data.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\inventory\create.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -899,6 +901,7 @@
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
     <Compile Include="Models\Dealer\DealerCreateViewModel.cs" />
     <Compile Include="Models\Dealer\DealerEditViewModel.cs" />
+    <Compile Include="Models\Inventory\InventoryCreateViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\PagingInfo.cs" />
     <Compile Include="Models\ProductsListViewModel.cs" />

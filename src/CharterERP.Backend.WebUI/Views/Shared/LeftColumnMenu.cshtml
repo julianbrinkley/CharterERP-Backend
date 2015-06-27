@@ -282,13 +282,21 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href="forms.html"><i class="fa fa-users fa-fw"></i> Owner Base</a>
+                    <a href="forms.html"><i class="fa fa-users fa-fw"></i> CRM<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="#">Customer Search</a> </li>
+                        <li><a href="#">Import Customers</a> </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-car fa-fw"></i> Inventory<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>@Html.ActionLink("All Vehicles", "Index", "Inventory")</li>
                         <li>@Html.ActionLink("Add Vehicle", "Create", "Inventory")</li>
+                        <li>@Html.ActionLink("Add Vehicle - Bulk", "Create", "Inventory")</li>
+                        <li>@Html.ActionLink("Import Inventory", "Create", "Inventory")</li>
+                        <li>@Html.ActionLink("Inventory Search", "Create", "Inventory")</li>
                     </ul>
                     <!-- /.nav-second-level -->
                 </li>

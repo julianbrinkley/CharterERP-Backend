@@ -6,6 +6,7 @@
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="~/dist/css/core.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
     <meta name="description" content="">
     <meta name="author" content="">
     <title>@ViewBag.Title - CharterERP</title>
@@ -29,15 +30,23 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+
+
 </head>
 <body>
     <div id="wrapper">
+        <div class="spinner" id="spinner"></div>
+        <div id="overlay"></div>
+        <!--Overlay for loading image-->
+
         <!-- Navigation -->
          @Html.Partial("LeftColumnMenu")
         <!--End Navigation-->
 
         <!-- Page Content -->
         <div id="page-wrapper">
+
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
@@ -64,5 +73,6 @@
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+    @RenderSection("JavaScript", required: false)
 </body>
 </html>

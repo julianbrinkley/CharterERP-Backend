@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "https://api.edmunds.com/api/v1/vehicle/vin/2G1FC3D33C9165616/configuration?api_key=jdcvrm5qhvnn6kh7pbsa3np9",
+                dataType: "json",
+                success: function (json) {
+                    // we have the response  
+
+                    alert("Server said123:\n '" + json.make.name + "'");
+                },
+                error: function (e) {
+                    alert('Error121212: ' + e);
+                }
+            });
+        });
+
+
+    </script>
+
+</head>
+<body>
+
+    <div>
+        <h2>All Products</h2>
+        <ul id="products" />
+    </div>
+
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="prodId" size="5" />
+        <input type="button" value="Search" onclick="find();" />
+        <p id="product" />
+    </div>
+
+    <p class="greeting-id">The ID is </p>
+    <p class="greeting-content">The content is </p>
+</body>
+
+
+
+
+</html>
