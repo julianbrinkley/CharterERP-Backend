@@ -12,8 +12,17 @@ namespace CharterERP.Backend.Domain.Entities
     {
         [Key]
         public int AccountID { get; set; }
+        
         [Column("Bill_Date")]
         public DateTime BillDate { get; set; }
+
+        [Column("Dealer_Limit")]
+        public int DealerLimit { get; set; }
+
+        [Column("Store_Limit")]
+        public int StoreLimit { get; set; }
+
+
 
     }
 }

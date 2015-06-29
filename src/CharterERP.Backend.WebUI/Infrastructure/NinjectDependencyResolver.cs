@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using CharterERP.Backend.Repository;
 using CharterERP.Backend.Domain.Entities;
+using CharterERP.Backend.Repository;
 
 
 namespace CharterERP.Backend.WebUI.Infrastructure
@@ -52,6 +53,7 @@ namespace CharterERP.Backend.WebUI.Infrastructure
             kernel.Bind<IStoreRepository>().To<StoreRepository>();
             kernel.Bind<IAccountRepository>().To<AccountRepository>();
             kernel.Bind<IVehicleRepository>().To<VehicleRepository>();
+            kernel.Bind<ICustomerRepository>().To<CustomerRepository>();
          
            
 

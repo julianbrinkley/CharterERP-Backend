@@ -30,6 +30,7 @@ namespace CharterERP.Backend.Domain.Entities
         public decimal? SalePrice { get; set; }
         public decimal? InternetPrice { get; set; }
         public DateTime InventoryDate { get; set; }
+        public int StoreID { get; set; }
 
         public virtual Store StoreLocation { get; set; }
         public virtual Dealer Dealer { get; set; }

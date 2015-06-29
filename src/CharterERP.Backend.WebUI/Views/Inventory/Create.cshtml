@@ -9,6 +9,7 @@
 @section JavaScript
 {
     <script type="text/javascript" src="@Url.Content("/Scripts/inventory/create.js")"></script>
+    <script type="text/javascript" src="@Url.Content("/Scripts/shared/global.js")"></script>
 
 }
 
@@ -117,6 +118,15 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SalePrice, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.SalePrice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SelectedStoreID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.SelectedStoreID, Model.Stores, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SelectedStoreID, "", new { @class = "text-danger" })
             </div>
         </div>
 

@@ -284,6 +284,7 @@
                 <li>
                     <a href="forms.html"><i class="fa fa-users fa-fw"></i> CRM<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
+                        <li><a href="#">Add Customer</a> </li>
                         <li><a href="#">Customer Search</a> </li>
                         <li><a href="#">Import Customers</a> </li>
                     </ul>
@@ -294,7 +295,7 @@
                     <ul class="nav nav-second-level">
                         <li>@Html.ActionLink("All Vehicles", "Index", "Inventory")</li>
                         <li>@Html.ActionLink("Add Vehicle", "Create", "Inventory")</li>
-                        <li>@Html.ActionLink("Add Vehicle - Bulk", "Create", "Inventory")</li>
+                        <li>@Html.ActionLink("Add Vehicle - Bulk", "Createmultiple", "Inventory")</li>
                         <li>@Html.ActionLink("Import Inventory", "Create", "Inventory")</li>
                         <li>@Html.ActionLink("Inventory Search", "Create", "Inventory")</li>
                     </ul>
@@ -338,6 +339,8 @@
                         <li>@Html.ActionLink("Store", "Index", "Store")</li>
 
                         <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
+
+                        <li>@Html.ActionLink("Billing", "Index", "Employee")</li>
 
                     </ul>
                     <!-- /.nav-second-level -->

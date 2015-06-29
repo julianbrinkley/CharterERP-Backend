@@ -3,6 +3,7 @@ using CharterERP.Backend.Repository;
 using CharterERP.Backend.WebUI.Models.Dealer;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -48,6 +49,17 @@ namespace CharterERP.Backend.WebUI.Controllers
         {
             try
             {
+                //get the number of dealers in the system
+                int dealerCount = repository.Dealers.Count();
+
+                //if the user has reached the maximum number of dealers display error message
+                if (dealerCount >= 1 )
+                {
+                    ModelState.AddModelError("DealerLimit", "You have reached the maximum number of dealer accounts (1).");
+                    return View(data);
+                }
+
+
                 if (ModelState.IsValid)
                 {                    
                 
@@ -130,9 +142,11 @@ namespace CharterERP.Backend.WebUI.Controllers
         // GET: Dealer/Delete/5
         public ActionResult Delete(int id)
         {
-            Dealer dealer = repository.Dealers.FirstOrDefault(d => d.DealerID == id);
 
-            return View(dealer);
+                Dealer dealer = repository.Dealers.FirstOrDefault(d => d.DealerID == id);
+
+                return View(dealer);
+
         }
 
         // POST: Dealer/Delete/5
@@ -141,9 +155,28 @@ namespace CharterERP.Backend.WebUI.Controllers
         {
             try
             {
-                repository.DeleteDealer(id);
 
-                return RedirectToAction("Index");
+                //Dealer delete doesn't work. Need to fix this.
+                Dealer dealer = repository.Dealers.FirstOrDefault(d => d.DealerID == id);
+
+                if(dealer.Stores.Count() > 0)
+                {
+                    Debug.WriteLine(dealer.Stores.Count());
+
+                    ModelState.AddModelError("DealerError", "The selected dealership has associated data. Please delete that data prior to deleting the sotre.");
+
+                    return View(dealer);
+                }
+                else
+                {                
+                    repository.DeleteDealer(id);
+
+                    return RedirectToAction("Index");
+
+                }
+
+               
+
             }
             catch
             {

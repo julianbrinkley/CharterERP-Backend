@@ -1,6 +1,9 @@
-﻿using CharterERP.Backend.Repository;
+﻿using CharterERP.Backend.Domain.Entities;
+using CharterERP.Backend.Repository;
+using CharterERP.Backend.WebUI.Models.Inventory;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,12 +14,29 @@ namespace CharterERP.Backend.WebUI.Controllers
     {
 
         private IVehicleRepository repository;
+        private IStoreRepository storeRepository;
 
-        public InventoryController(IVehicleRepository vehicleRepository)
+        public InventoryController(IVehicleRepository vehicleRepository, IStoreRepository storeRepository)
         {
             this.repository = vehicleRepository;
+            this.storeRepository = storeRepository;
 
         }
+
+
+        //Method to create a Select List of All Stores in the system
+        private IEnumerable<SelectListItem> GetStores()
+        {
+            var stores = storeRepository.Stores.Select( s =>
+                new SelectListItem
+                {
+                    Value = Convert.ToString(s.StoreID),
+                    Text = s.Name
+                });
+
+            return new SelectList(stores, "Value", "Text");
+        }
+
 
         // GET: Inventory
         public ActionResult Index()
@@ -24,10 +44,6 @@ namespace CharterERP.Backend.WebUI.Controllers
             return View(repository.Vehicles);
         }
 
-        public ActionResult Test()
-        {
-            return View();
-        }
 
         // GET: Inventory/Details/5
         public ActionResult Details(int id)
@@ -35,25 +51,73 @@ namespace CharterERP.Backend.WebUI.Controllers
             return View();
         }
 
+        // GET: Inventory/CreateMultiple
+        public ActionResult CreateMultiple()
+        {
+
+            return View();
+        }
+
+        // POST: Inventory/CreateMultiple
+        [HttpPost]
+        public ActionResult CreateMultiple(FormCollection data)
+        {
+
+            return View();
+        }
+
+
         // GET: Inventory/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new InventoryCreateViewModel { Stores = GetStores() };
+
+            return View(model);
         }
 
         // POST: Inventory/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(InventoryCreateViewModel data)
         {
             try
             {
-                // TODO: Add insert logic here
+                if (ModelState.IsValid)
+                {
 
-                return RedirectToAction("Index");
+                    //Vehicle vehicle = new Vehicle
+                    //{
+                    //      Color = data.Color,
+                    //      Cost = data.Cost,
+                    //      Dealer = , //set the dealer in a global variable?
+                    //      InternetPrice = 0.00m,
+                    //      InventoryDate = DateTime.Now,
+                    //      KBBRetail = 0.00m,
+                    //      Mileage = data.Mileage,
+                    //      NewUsed = Domain.Entities.NewUsed.Used, //change this to have a new used drop down
+                    //      SalePrice = data.SalePrice,
+                    //      StockNumber = data.StockNumber,
+                    //      StoreLocation = , //need a drop down with the stores
+                    //      Style = data.Style,
+                    //      VIN = data.VIN,
+                    //      Year = data.Year,
+                    //      Make = data.Make,
+                    //      Model = data.Model
+                           
+                        
+                    //};
+
+                    //repository.SaveVehicle(vehicle);
+
+                    return RedirectToAction("Index");
+                }
+
+                return View(data);
+
             }
             catch
             {
-                return View();
+                return View(data);
             }
         }
 

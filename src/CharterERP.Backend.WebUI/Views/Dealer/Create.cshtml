@@ -12,7 +12,10 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <p class="error">@ViewBag.ErrorMessage</p>
+        <div class="text-danger">
+            @Html.ValidationSummary()      
+        </div>
+
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

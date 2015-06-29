@@ -70,14 +70,16 @@ namespace CharterERP.Backend.WebUI.Controllers
                 if (ModelState.IsValid)
                 {
 
+
                     Store store = new Store
                     {
+
                         Name = data.Name,
                         StreetAddress = data.StreetAddress,
                         City = data.City,
                         State = data.State,
                         PostalCode = data.PostalCode,
-                        Dealer = dealerRepository.Dealers.First(d => d.DealerID == data.SelectedDealerID)
+                        DealerID = dealerRepository.Dealers.First(d => d.DealerID == data.SelectedDealerID).DealerID
                     };
 
 
@@ -153,7 +155,9 @@ namespace CharterERP.Backend.WebUI.Controllers
         // GET: Store/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Store store = repository.Stores.FirstOrDefault(s => s.StoreID == id);
+
+            return View(store);
         }
 
         // POST: Store/Delete/5
@@ -162,7 +166,7 @@ namespace CharterERP.Backend.WebUI.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
+                repository.DeleteStore(id);
 
                 return RedirectToAction("Index");
             }

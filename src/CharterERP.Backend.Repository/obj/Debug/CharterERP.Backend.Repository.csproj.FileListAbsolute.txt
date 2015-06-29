@@ -22,3 +22,8 @@ C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repos
 C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\CharterERP.Backend.Domain.pdb
 C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\EntityFramework.xml
 C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\System.Web.dll
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\WebMatrix.Data.dll
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\WebMatrix.WebData.dll
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\WebMatrix.Data.xml
+C:\Users\Julian\Documents\GitHub\CharterERP-Backend\src\CharterERP.Backend.Repository\bin\Debug\WebMatrix.WebData.xml

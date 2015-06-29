@@ -18,6 +18,7 @@ namespace CharterERP.Backend.Domain.Entities
         public string City { get; set; }
         public string State { get; set; }
         public string PostalCode { get; set; }
+        public int DealerID { get; set; }
 
         public virtual Dealer Dealer { get; set; }
         public virtual IEnumerable<Vehicle> Vehicles { get; set; }

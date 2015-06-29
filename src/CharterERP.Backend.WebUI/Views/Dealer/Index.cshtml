@@ -1,49 +1,64 @@
-﻿@using CharterERP.Backend.Domain.Entities
-@model IEnumerable<Dealer>
+﻿@model IEnumerable<CharterERP.Backend.Domain.Entities.Dealer>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+<h2>Index</h2>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>List</title>
-</head>
-<body>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountID)
+        </th>
+        <th></th>
+    </tr>
 
-    <table class="table table-striped">
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.Name)</th>
-            <th>@Html.DisplayNameFor(model => model.StreetAddress)</th>
-            <th>@Html.DisplayNameFor(model => model.City)</th>
-            <th>@Html.DisplayNameFor(model => model.State)</th>
-            <th>@Html.DisplayNameFor(model => model.PostalCode)</th>
-            <th></th>
-        </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DealerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DealerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DealerID })
+        </td>
+    </tr>
+}
 
-        @foreach (var d in Model)
-        {
-            <tr>
-                <td>@d.Name</td>
-                <td>@d.StreetAddress</td>
-                <td>@d.City</td>
-                <td>@d.State</td>
-                <td>@d.PostalCode</td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = d.DealerID }) |
-                    @Html.ActionLink("Details", "Details", new { id = d.DealerID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = d.DealerID })
-                </td>
-            </tr>
-        }
-
-
-    </table>
-
-
-</body>
-</html>
+</table>

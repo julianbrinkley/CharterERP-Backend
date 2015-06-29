@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace CharterERP.Backend.WebUI.Models.Inventory
 {
     public class InventoryCreateViewModel
     {
+
+        [Display(Name = "Store Location")]
+        [Required(ErrorMessage = "Please select the vehicle's store location")]
+        public int SelectedStoreID { get; set; }
+
+        public IEnumerable<SelectListItem> Stores { get; set; }
+
 
         [Required(ErrorMessage = "Please enter a vehicle manufacturer")]
         public string Make { get; set; }

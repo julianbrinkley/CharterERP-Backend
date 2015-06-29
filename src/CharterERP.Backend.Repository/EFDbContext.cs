@@ -18,6 +18,7 @@ namespace CharterERP.Backend.Repository
         public DbSet<Store> Stores { get; set; }
         public DbSet <Account> Accounts { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -28,6 +29,7 @@ namespace CharterERP.Backend.Repository
             modelBuilder.Entity<Store>().ToTable("Stores");
             modelBuilder.Entity<Account>().ToTable("Accounts");
             modelBuilder.Entity<Vehicle>().ToTable("Vehicles");
+            modelBuilder.Entity<Customer>().ToTable("Customers");
 
         }
 
