@@ -1,0 +1,136 @@
+﻿@model IEnumerable<CharterERP.Backend.Domain.Entities.Customer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateofBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SocialSecurityNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriversLicenseNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhysicalStreetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhysicalCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhysicalState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhysicalPostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MailingStreetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MailingCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MailingState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MailingPostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomePhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkPhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobilePhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiddleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateofBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SocialSecurityNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriversLicenseNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhysicalStreetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhysicalCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhysicalState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhysicalPostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MailingStreetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MailingCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MailingState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MailingPostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkPhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobilePhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CustomerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerID })
+        </td>
+    </tr>
+}
+
+</table>

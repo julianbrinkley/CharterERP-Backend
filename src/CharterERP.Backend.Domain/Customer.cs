@@ -15,7 +15,7 @@ namespace CharterERP.Backend.Domain.Entities
 
 
         //Demographic Information
-        public DateTime DateofBirth { get; set; }
+        public DateTime? DateofBirth { get; set; }
         public string SocialSecurityNumber { get; set; }
         public string DriversLicenseNumber { get; set; }
 

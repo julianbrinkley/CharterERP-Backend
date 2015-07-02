@@ -1,0 +1,163 @@
+﻿@model CharterERP.Backend.Domain.Entities.Customer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateofBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateofBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SocialSecurityNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SocialSecurityNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DriversLicenseNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DriversLicenseNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhysicalStreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhysicalStreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhysicalCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhysicalCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhysicalState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhysicalState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhysicalPostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhysicalPostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingStreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailingStreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailingCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailingState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailingPostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailingPostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomePhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomePhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MobilePhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MobilePhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustomerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -10,5 +10,10 @@ namespace CharterERP.Backend.Repository
     public interface ICustomerRepository
     {
         IEnumerable<Customer> Customers { get; }
+
+        void SaveCustomer(Customer customer);
+
+        Customer DeleteCustomer(int customerID);
+
     }
 }
